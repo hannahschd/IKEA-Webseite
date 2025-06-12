@@ -4,88 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IKEA</title>
-  <style>
-    body {
-      font-family: Alexandria, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    header {
-      background-color: #333;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    main {
-      padding: 2rem;
-    }
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <header>
-    <h1>IKEA</h1>
+    <h1 class="scroll-anim">IKEA</h1>
   </header>
 
   <main>
-    <h2>Über mich</h2>
-    <p>Dies ist ein einfacher Textabschnitt. Du kannst diesen Bereich nutzen, um Inhalte wie Texte, Bilder oder Links hinzuzufügen.</p>
+    
+    <div class="holzstuhl">
+      <img src="Header_Holzstuhl.png" class="headerbild">
+      <h2>MEHR ALS EIN STUHL. EIN UNVERGESSLICHES SITZERLEBNIS.</h2>
+    </div>
+<hr>
+     <div class="Keira Knightley">
+       <h2>THRONE LIKE KEIRA KNIGHTLEY</h2>
+      <img src="Keira Knightley.png" class="bild">
+      <p class="zusatz">"Some chairs are built. Others are composed, like music."</p>
+      <p class="Keira">- Keira Knightley</p>
+     </div>
+
+     <!-- 3 Bilder nebeneinander mit Bildunterschrift -->
+<div class="bilderreihe">
+  <figure>
+    <img src="Qualitätssiegel TÜV.jpg" alt="Beschreibung Bild 1">
+    <figcaption>TÜV-geprüft</figcaption>
+  </figure>
+  <figure>
+    <img src="Qualitätssiegel_Materialien.jpg" alt="Beschreibung Bild 2">
+    <figcaption>Hochwertige Materialien</figcaption>
+  </figure>
+  <figure>
+    <img src="Qualitätssiegl_Preis.jpg" alt="Beschreibung Bild 3">
+    <figcaption>Preis-Leistungs-Verhältnis</figcaption>
+  </figure>
+</div>
+
+<hr>
+
+    <div class="Lederstuhl">
+      <img src="Lederstuhl.jpg" class="bild">
+      <h2 class="Überschrift">Fauteuil Élégance </h2> 
+      <p class="Beschreibung">Ein luxuriöser Glasstuhl, der Leichtigkeit und Raffinesse vereint – kristallklar, mit subtilen, schimmernden Details, die pure Eleganz ausstrahlen.</p>
+      <p class="cta">JETZT BESTELLEN</p>
+    </div>
+
+    <div class="Glasstuhl">
+      <img src="Glasstuhl.png" class="bild">
+      <h2 class="Überschrift">Chaise Lumière</h2>
+      <p class="Beschreibung">Edler Lederstuhl in ikonischem Beige, veredelt mit geschwungenen Akzenten – inspiriert von der zeitlosen Eleganz der Pariser Haute Couture.</p>
+      <p class="cta">JETZT BESTELLEN</p>
+    </div>
+
+    <div class="Marmorstuhl">
+      <img src="Marmorstuhl.png" class="bild">
+      <h2 class="Überschrift">Trône de Marbre</h2>
+      <p class="Beschreibung">Ein majestätischer Stuhl aus edlem Marmor – kraftvoll, skulptural und von zeitloser Eleganz durchdrungen.</p>
+      <p class="cta">JETZT BESTELLEN</p>
+    </div>
+
+    <div class="Perlenstuhl">
+      <img src="Perlenstuhl.jpg" class="bild">
+      <h2 class="Überschrift">Perla Blanche</h2>
+      <p class="Beschreibung">Ein kunstvoller Stuhl aus unzähligen weißen Perlen – schimmernd, filigran und voller anmutiger Opulenz.</p>
+      <p class="cta">JETZT BESTELLEN</p>
+    </div>
+
   </main>
 
-   <title>Bild mit Beschreibung</title>
-  <style>
-    .bild-container {
-      max-width: 600px;
-      margin: 40px auto;
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
-
-    .bild-container img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .bild-container h2 {
-      margin-top: 1rem;
-      font-size: 1.5rem;
-    }
-
-    .bild-container p {
-      margin: 0.5rem 0;
-    }
-
-    .zusatz {
-      color: #666;
-      font-style: italic;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="bild-container">
-    <img src="https://via.placeholder.com/600x400" alt="Beispielbild">
-    <h2>Mein Bildtitel</h2>
-    <p>Dies ist eine kurze Beschreibung des Bildes.</p>
-    <p class="zusatz">Weitere Informationen oder Bemerkungen.</p>
-  </div>
-
-</body>
-
   <footer>
-    <p>&copy; 2025 Meine Webseite</p>
+    <p>Über uns</p>
+    <p>Kontakt</p>
+    <p>Datenschutz</p>
+    <p>AGB</p>
+    <p>Hilfe und FAQ</p>
   </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>

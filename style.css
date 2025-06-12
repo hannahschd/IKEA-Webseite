@@ -1,0 +1,170 @@
+/* Desktop-Layout (Standard) bleibt wie bisher */
+/* Breakpoint für Tablets und Smartphones */
+@media (max-width: 800px) {
+  .bilderreihe {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .bilderreihe img {
+    width: 90vw;
+    max-width: 320px;
+  }
+  .holzstuhl,
+  .Keira\ Knightley,
+  .Lederstuhl,
+  .Glasstuhl,
+  .Marmorstuhl,
+  .Perlenstuhl {
+    margin: 16px 0;
+    padding: 0 8px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p,
+  .cta {
+    font-size: 1rem;
+  }
+  main {
+    padding: 1rem;
+    margin-bottom: 8rem;
+  }
+  .bild {
+  width: 530px;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 10rem auto;
+  margin-bottom: 70px;
+}
+.headerbild {
+  width: 530px;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 10rem auto;
+}
+}
+
+
+
+body {
+  font-family: 'Alexandria',Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+header {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 500px
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 12rem; 
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  bottom: 0;
+}
+
+.bild-container {
+  max-width: 800px;
+  margin: 200px auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bild-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.bild-container h2 {
+  margin-top: 10rem;
+  font-size: 1.5rem;
+}
+
+.bild-container p {
+  margin: 0.5rem 0;
+}
+
+.zusatz {
+  color: #666;
+  font-style: italic;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.cta {
+     text-decoration: underline;
+     margin-top: 50px;
+   } 
+
+   .bilderreihe {
+  display: flex;
+  gap: 24px; /* Abstand zwischen den Bildern */
+  justify-content: center;
+  align-items: flex-start;
+}
+.bilderreihe figure {
+  margin: 0;
+  text-align: center;
+}
+.bilderreihe img {
+  width: 200px; /* oder gewünschte Breite */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.bilderreihe figcaption {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+.holzstuhl {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+hr {
+  border: none;
+  border-top: 2px solid #000;
+  margin: 2rem auto;
+  width: 50%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+/* Beispiel für Überschriften und Buttons */
+.cta:hover {
+  transform: scale(1.08);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.Keira {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.scroll-anim {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.scroll-anim.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
