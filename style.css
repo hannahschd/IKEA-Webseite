@@ -1,60 +1,8 @@
-/* Desktop-Layout (Standard) bleibt wie bisher */
-/* Breakpoint für Tablets und Smartphones */
-@media (max-width: 800px) {
-  .bilderreihe {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-  }
-  .bilderreihe img {
-    width: 90vw;
-    max-width: 320px;
-  }
-  .holzstuhl,
-  .Keira\ Knightley,
-  .Lederstuhl,
-  .Glasstuhl,
-  .Marmorstuhl,
-  .Perlenstuhl {
-    margin: 16px 0;
-    padding: 0 8px;
-    text-align: center;
-  }
-  h2 {
-    font-size: 1.2rem;
-  }
-  p,
-  .cta {
-    font-size: 1rem;
-  }
-  main {
-    padding: 1rem;
-    margin-bottom: 8rem;
-  }
-  .bild {
-  width: 530px;
-  max-width: 600px;
-  height: auto;
-  display: block;
-  margin: 10rem auto;
-  margin-bottom: 70px;
-}
-.headerbild {
-  width: 530px;
-  max-width: 600px;
-  height: auto;
-  display: block;
-  margin: 10rem auto;
-}
-}
-
-
-
 body {
-  font-family: 'Alexandria',Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  font-family: 'Alexandria', Arial, Helvetica, sans-serif;
   background-color: #ffffff;
 }
 
@@ -63,29 +11,44 @@ header {
   color: rgb(0, 0, 0);
   padding: 1rem;
   text-align: center;
-  margin-bottom: 500px
+  margin-bottom: 100px;
 }
 
 main {
   padding: 2rem;
   text-align: center;
-  margin-bottom: 12rem; 
+  margin-bottom: 5rem; 
 }
 
 footer {
-  background-color: #000000;
-  color: white;
+  background-color: #cfcaca;
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 1rem;
   width: 100%;
   bottom: 0;
 }
 
+footer p,
+.bilderreihefooter {
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+footer p:hover,
+.bilderreihefooter:hover,
+.cta:hover {
+  transform: scale(1.08);
+}
+
+.bilderreihefooter {
+  width: 40px;
+}
+
 .bild-container {
   max-width: 800px;
   margin: 200px auto;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .bild-container img {
@@ -106,65 +69,343 @@ footer {
 .zusatz {
   color: #666;
   font-style: italic;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin: 70px 0;
 }
 
 .cta {
-     text-decoration: underline;
-     margin-top: 50px;
-   } 
+  text-decoration: underline;
+  margin-top: 50px;
+}
 
-   .bilderreihe {
+.bilderreihe {
   display: flex;
-  gap: 24px; /* Abstand zwischen den Bildern */
+  gap: 24px;
   justify-content: center;
   align-items: flex-start;
 }
+
 .bilderreihe figure {
   margin: 0;
   text-align: center;
 }
+
 .bilderreihe img {
-  width: 200px; /* oder gewünschte Breite */
+  width: 200px;
   height: auto;
   display: block;
   margin: 0 auto;
 }
+
 .bilderreihe figcaption {
   margin-top: 8px;
   font-size: 1rem;
   color: #333;
   font-weight: bold;
 }
+
 .holzstuhl {
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin: 200px 0;
 }
+
 hr {
   border: none;
   border-top: 2px solid #000;
-  margin: 2rem auto;
   width: 50%;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 100px auto;
 }
-/* Beispiel für Überschriften und Buttons */
-.cta:hover {
-  transform: scale(1.08);
-  transition: transform 0.2s;
-  cursor: pointer;
-}
+
 .Keira {
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin: 70px 0;
 }
-.scroll-anim {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 0.6s, transform 0.6s;
+
+.scroll-scale {
+  position: sticky;
+  top: 30vh;
+  transform: scale(1);
+  transition: transform 0.4s;
+  z-index: 10;
 }
-.scroll-anim.visible {
+
+.zoom-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zoom-text {
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   opacity: 1;
-  transform: translateY(0);
+  transition: none;
+  z-index: 2;
 }
+
+.zoom-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.4);
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.spacer {
+  height: 120vh;
+}
+.Perlenstuhl .bild-desktop {
+  display: none;
+}
+.Perlenstuhl .bild {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .bilderreihe {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 12px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .bilderreihe img {
+    width: 80vw;
+    max-width: 320px;
+  }
+
+  .holzstuhl,
+  .Keira\ Knightley,
+  .Lederstuhl,
+  .Glasstuhl,
+  .Marmorstuhl,
+  .Perlenstuhl {
+    margin: 16px 0;
+    padding: 0 8px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p,
+  .cta {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+    margin-bottom: 8rem;
+  }
+
+  .bild {
+    width: 400px;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto 40px auto;
+    box-sizing: border-box;
+    margin-top: 70px;
+  }
+
+  .headerbild {
+    width: 100%;
+    max-width: 600px;
+    margin: 10rem auto;
+  }
+  .marmor-perle-wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .Marmorstuhl,
+  .Perlenstuhl {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    text-align: center;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .bilderreihe {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .bilderreihe img {
+    width: 45vw;
+    max-width: 300px;
+  }
+
+  .bild-container h2 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p,
+  .cta {
+    font-size: 1.1rem;
+  }
+
+  .bild {
+    width: 90%;
+    margin: 70px auto 40px auto;
+  }
+
+  .headerbild {
+    width: 480px;
+    margin: 8rem auto;
+  }
+.marmor-perle-wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .Marmorstuhl,
+  .Perlenstuhl {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  .bilderreihe {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .bilderreihe img {
+    width: 200px;
+  }
+
+  .bild {
+    width: 100%;
+    max-width: 600px;
+    margin: 70px auto 40px auto;
+  }
+
+  .headerbild {
+    width: 530px;
+    margin: 10rem auto;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  .cta {
+    font-size: 1.2rem;
+  }
+  .Lederstuhl {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .Lederstuhl .bild {
+    width: 600px;
+    max-width: 40vw;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .lederstuhl-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    margin-top: 270px;
+  }
+  .lederstuhl-text > * {
+    margin-bottom: 1rem;
+  }
+.Glasstuhl {
+    display: flex;
+    flex-direction: row-reverse; /* Bild rechts, Text links */
+    align-items: flex-start;
+    gap: 40px;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .Glasstuhl .bild {
+    width: 600px;
+    max-width: 40vw;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .glasstuhl-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    margin-top: 270px;
+  }
+  .glasstuhl-text > * {
+    margin-bottom: 1rem;
+  }
+  .marmor-perle-wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .Marmorstuhl,
+  .Perlenstuhl {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    text-align: center;
+  }
+  .Marmorstuhl .bild,
+  .Perlenstuhl .bild {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 24px;
+  }
+  .Perlenstuhl .bild-desktop {
+    display: block;
+    width: 80%;
+    margin-top: 71px;
+  }
+  .Perlenstuhl .bild {
+    display: none;
+  }
+  .perlenstuhl-h2{
+    margin-top: 25px;
+  }
+  
+}
+
