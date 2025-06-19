@@ -1,575 +1,75 @@
 body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: 'Alexandria', Arial, Helvetica, sans-serif;
-  background-color: #ffffff;
-}
-
-header {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 1rem;
-  text-align: center;
-  margin-bottom: 100px;
-}
-
-main {
-  padding: 2rem;
-  text-align: center;
-  margin-bottom: 5rem; 
-}
-
-footer {
-  background-color: #cfcaca;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 1rem;
-  width: 100%;
-  bottom: 0;
-}
-
-.bilderreihefooter {
-  width: 40px;
-}
-
-.bild-container {
-  max-width: 800px;
-  margin: 200px auto;
-  text-align: center;
-}
-
-.bild-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.bild-container h2 {
-  margin-top: 10rem;
-  font-size: 1.5rem;
-}
-
-.bild-container p {
-  margin: 0.5rem 0;
-}
-
-.zusatz {
-  color: #666;
-  font-style: italic;
-  margin: 70px 0;
-}
-
-.cta {
-  text-decoration: underline;
-  margin-top: 50px;
-}
-
-.Beschreibung {
-  margin-top: 30px;
-}
-
-.bilderreihe {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.bilderreihe figure {
-  margin: 0;
-  text-align: center;
-}
-
-.bilderreihe img {
-  width: 200px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.bilderreihe figcaption {
-  margin-top: 8px;
-  font-size: 1rem;
-  color: #333;
-  font-weight: bold;
-}
-
-.holzstuhl {
-  margin: 200px 0;
+  font-family: 'Alexandria', sans-serif;
 }
 
 hr {
-  border: none;
-  border-top: 2px solid #000;
-  width: 50%;
-  margin: 100px auto;
+  width: 300px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.zusatz {
+  display: block;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  max-width: 600px;
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: center;
+  color: grey;
 }
 
 .Keira {
-  margin: 70px 0;
+  text-align: center;
 }
-
-.scroll-scale {
-  position: sticky;
-  top: 30vh;
-  transform: scale(1);
-  transition: transform 0.4s;
-  z-index: 10;
-}
-
-.zoom-section {
-  position: relative;
-  height: 100vh;
+.bilderreihe {
   display: flex;
   justify-content: center;
+  gap: 2rem;
+  margin: 40px 0;
+}
+
+.bilderreihe figure {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  margin: 0;
 }
 
-.zoom-text {
-  font-size: 4rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-  transition: none;
-  z-index: 2;
-}
-
-.zoom-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.4);
-  opacity: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.spacer {
-  height: 120vh;
-}
-.Perlenstuhl .bild-desktop {
-  display: none;
-}
-.Perlenstuhl .bild {
+.bilderreihe img {
+  max-width: 250px;
+  height: auto;
   display: block;
 }
 
-
-.cta,
-.cta-lederstuhl,
-.cta-glasstuhl {
-  animation: cta-pulse 2s infinite alternate;
-  /* Optional: für weiches Pulsieren */
-  transition: none;
+.bilderreihe figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #444;
 }
-
-@keyframes cta-pulse {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.08);
-  }
+.Beschreibung {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
 }
-
-@media (max-width: 550px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  main {
-    padding: 1rem;
-    margin: 0 0 8rem 0;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  p,
-  .cta,
-  .cta-lederstuhl,
-  .cta-glasstuhl {
-    font-size: 1rem;
-    text-decoration: underline;
-    margin-top: 50px;
-  }
-
-  .headerbild {
-    width: 100%;
-    max-width: 600px;
-    margin: 10rem auto;
-    display: block;
-  }
-
-
-  .bilderreihe {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 12px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 1rem 0;
-  }
-
-  .bilderreihe figure {
-    flex: 0 0 auto;
-    text-align: center;
-  }
-
-  .bilderreihe img {
-    width: 110px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .bilderreihe figure:nth-child(3) img {
-    width: 100px;
-    margin-top: 10px;
-  }
-
-  /* Einzelne Stuhl-Container */
-  .holzstuhl,
-  .KeiraKnightley,
-  .Lederstuhl,
-  .Glasstuhl,
-  .Marmorstuhl,
-  .Perlenstuhl {
-    margin: 16px 0;
-    padding: 0 8px;
-    text-align: center;
-  }
-
-  .Perlenstuhl .bild-desktop {
-    display: none;
-  }
-
-  .Perlenstuhl .bild {
-    display: block;
-  }
-}
-
-@media (min-width: 701px) and (max-width: 1370px) {
-
-  .bild {
-    width: 90%;
-    max-width: 600px;
-    margin: 70px auto 40px auto;
-  }
-  .bilderreihe {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-  }
-
-  .bilderreihe img {
-    width: 45vw;
-    max-width: 300px;
-  }
-
-  .bild-container h2 {
-    font-size: 1.4rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  p,
-  .cta {
-    font-size: 1.1rem;
-  }
-
-  .headerbild {
-    width: 480px;
-    margin: 8rem auto;
-  }
-.marmor-perle-wrapper {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 80px;
-    margin-bottom: 80px;
-  }
-  .Marmorstuhl,
-  .Perlenstuhl {
-    flex: 1 1 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 500px;
-    text-align: center;
-  }
-  .Lederstuhl {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    justify-content: flex-start;
-    text-align: left;
-  }
-  .Lederstuhl .bild {
-    width: 300px;
-    max-width: 40vw;
-    height: auto;
-    flex-shrink: 0;
-  }
-  .lederstuhl-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    margin-top: 270px;
-  }
-  .lederstuhl-text > * {
-    margin-bottom: 1rem;
-  }
-.Glasstuhl {
-    display: flex;
-    flex-direction: row-reverse; /* Bild rechts, Text links */
-    align-items: flex-start;
-    gap: 40px;
-    justify-content: flex-start;
-    text-align: left;
-  }
-  .Glasstuhl .bild {
-    width: 600px;
-    max-width: 40vw;
-    height: auto;
-    flex-shrink: 0;
-  }
-  .glasstuhl-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    margin-top: 270px;
-  }
-  .glasstuhl-text > * {
-    margin-bottom: 1rem;
-  }
-  .marmor-perle-wrapper {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 80px;
-    margin-bottom: 80px;
-  }
-  .Marmorstuhl,
-  .Perlenstuhl {
-    flex: 1 1 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 500px;
-    text-align: center;
-  }
-  .Marmorstuhl .bild,
-  .Perlenstuhl .bild {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    margin-bottom: 24px;
-  }
-  .Perlenstuhl .bild-desktop {
-    display: block;
-    width: 80%;
-    margin-top: 71px;
-  }
-  .Perlenstuhl .bild {
-    display: none;
-  }
-  .perlenstuhl-h2{
-    margin-top: 25px;
-  }
-  
-}
-
-
-@media (min-width: 1371px) {
-
-  .bild {
-    width: 100%;
-    max-width: 600px;
-    margin: 70px auto 40px auto;
-  }
-  
-  .bilderreihe {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
-  }
-
-  .bilderreihe img {
-    width: 200px;
-  }
-
-
-  .headerbild {
-    width: 530px;
-    margin: 10rem auto;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  p,
-  .cta {
-    font-size: 1.2rem;
-  }
-  footer p,
-  .bilderreihefooter {
-  transition: transform 0.2s;
-  cursor: pointer;
-}
-
-footer p:hover,
-.bilderreihefooter:hover,
-.cta:hover {
-  transform: scale(1.08);
-}
-  .Lederstuhl {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    justify-content: flex-start;
-    text-align: left;
-  }
-  .Lederstuhl .bild {
-    width: 600px;
-    max-width: 40vw;
-    height: auto;
-    flex-shrink: 0;
-  }
-  .lederstuhl-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    margin-top: 270px;
-  }
-  .lederstuhl-text > * {
-    margin-bottom: 1rem;
-    width: 500px;
-  }
-  
-.Glasstuhl {
-    display: flex;
-    flex-direction: row-reverse; /* Bild rechts, Text links */
-    align-items: flex-start;
-    gap: 40px;
-    justify-content: flex-start;
-    text-align: left;
-  }
-  .Glasstuhl .bild {
-    width: 600px;
-    max-width: 40vw;
-    height: auto;
-    flex-shrink: 0;
-  }
-  .glasstuhl-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    margin-top: 270px;
-  }
-  .glasstuhl-text > * {
-    margin-bottom: 1rem;
-  }
-  .Glasstuhl .Beschreibung {
-    width:500px;
-  }
-
-  .cta-lederstuhl,
-  .cta-glasstuhl {
-  display: inline-block;
-  transform-origin: left center;
+.cta {
+  text-align: center;
   text-decoration: underline;
-  transition: transform 0.2s;
-  }
- 
-.cta-lederstuhl:hover,
-.cta-glasstuhl:hover {
-  transform: scale(1.08);
+  font-size: 2rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-  .marmor-perle-wrapper {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 80px;
-    margin-bottom: 80px;
-  }
-  .Marmorstuhl,
-  .Perlenstuhl {
-    flex: 1 1 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 500px;
-    text-align: center;
-  }
-  .Marmorstuhl .bild,
-  .Perlenstuhl .bild {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    margin-bottom: 24px;
-  }
-  .Perlenstuhl .bild-desktop {
-    display: block;
-    width: 80%;
-    margin-top: 71px;
-  }
-  .Perlenstuhl .bild {
-    display: none;
-  }
-  .perlenstuhl-h2{
-    margin-top: 25px;
-  }
-  .cta {
-    transition: transform 0.2s;
-    cursor: pointer;
-  }
-  .cta:hover {
-    transform: scale(1.08);
-  }
+p {
+  font-size: 2rem;
 }
-
-
-@media (max-width: 1370px) {
-  .cta:hover,
-  .cta-lederstuhl:hover,
-  .cta-glasstuhl:hover,
-  .bilderreihefooter:hover,
-  footer p:hover {
-    transform: none !important;
-    /* Optional: Cursor zurücksetzen */
-    cursor: default !important;
-  }
+h2 {
+  font-size: 2.5rem;
 }
-
-@media (max-width: 700px) {
-  body::before {
-    content: "MOBILE VERSION ACTIVE";
-    color: red;
-  }
-}
-@media (min-width: 701px) {
-  body::before {
-    content: "TABLET/DESKTOP VERSION ACTIVE";
-    color: green;
-  }
-}
-
