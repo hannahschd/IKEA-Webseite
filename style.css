@@ -31,6 +31,7 @@ body {
   opacity: 1;
   transition: none;
   z-index: 2;
+  color: #000000;
 }
 
 .zoom-image {
@@ -42,6 +43,32 @@ body {
   z-index: 1;
   pointer-events: none;
 }
+
+.icon-row {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.icon-group-right {
+  display: flex;
+  gap: 16px;
+}
+
+.icon {
+  width: 32px;
+  height: auto;
+  transform: scale(1);
+  opacity: 1;
+  transition: none;
+}
+
 
 header {
   background-color: #ffffff;
@@ -61,7 +88,7 @@ footer {
   background-color: #cfcaca;
   color: rgb(0, 0, 0);
   text-align: center;
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
   padding-top: 2rem;
   /* width: 100%;  <-- Diese Zeile entfernen */
   box-sizing: border-box;
