@@ -10,6 +10,10 @@ body {
   height: 120vh;
 }
 
+.spacer-bottom {
+  height: 20vh;
+}
+
 .zoom-section {
   position: relative;
   height: 100vh;
@@ -68,6 +72,23 @@ body {
   opacity: 1;
   transition: none;
 }
+
+.bottom-text {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  opacity: 0;
+  transition: none;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+
+}
+
 
 
 header {
@@ -177,7 +198,7 @@ footer {
 hr {
   border: none;
   border-top: 2px solid #000;
-  width: 50%;
+  width: 70%;
   margin: 100px auto;
 }
 

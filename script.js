@@ -2,6 +2,7 @@ const section = document.querySelector(".zoom-section");
 const text = document.querySelector(".zoom-text");
 const image = document.querySelector(".zoom-image");
 const icons = document.querySelectorAll(".icon"); // NEU
+const bottomText = document.querySelector(".bottom-text");
 
 function animateOnScroll() {
   const rect = section.getBoundingClientRect();
@@ -37,7 +38,17 @@ function animateOnScroll() {
   }
 });
 
+// BOTTOM TEXT – einblenden bei Scrollfortschritt > 0.5
+if (scrollProgress > 0.5) {
+  const textProgress = (scrollProgress - 0.5) / 0.5; // normalisieren
+  const opacity = Math.min(textProgress, 1);
+  bottomText.style.opacity = opacity;
+} else {
+  bottomText.style.opacity = 0;
+}
+
   requestAnimationFrame(animateOnScroll);
 }
 
-requestAnimationFrame(animateOnScroll);
+window.addEventListener('scroll', animateOnScroll); // <--- Das hinzufügen!
+animateOnScroll();
