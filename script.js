@@ -59,3 +59,12 @@ if (scrollProgress > 0.5) {
 
 window.addEventListener('scroll', animateOnScroll); // <--- Das hinzufügen!
 animateOnScroll();
+
+window.addEventListener('scroll', function() {
+  const arrow = document.querySelector('.scroll-arrow');
+  if (window.scrollY > 10) {
+    arrow.classList.add('hide');
+  } else {
+    arrow.classList.remove('hide');
+  }
+});

@@ -6,6 +6,29 @@ body {
   background-color: #ffffff;
 }
 
+.scroll-arrow {
+  position: fixed;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  color: #000000;
+  z-index: 100;
+  animation: arrow-bounce 1.2s infinite alternate;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+@keyframes arrow-bounce {
+  0%   { transform: translateX(-50%) translateY(0); }
+  100% { transform: translateX(-50%) translateY(18px); }
+}
+.scroll-arrow.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
 .spacer {
   height: 120vh;
 }
