@@ -27,15 +27,22 @@ body {
 }
 
 .zoom-text {
-  font-size: 4rem;
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: 10; 
+  padding-left: 40px;
+}
+
+.zoom-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-  transition: none;
-  z-index: 2;
-  color: #000000;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .zoom-image {
@@ -312,5 +319,25 @@ h2 {
   .bilderreihefooter:hover,
   footer p:hover {
     transform: scale(1.08);
+  }
+}
+
+
+
+/* Tablet: optional, falls du Anpassungen möchtest */
+@media (max-width: 1024px) {
+  .zoom-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+/* Smartphone: Bild füllt auch hier den Bildschirm */
+@media (max-width: 600px) {
+  .zoom-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
   }
 }
