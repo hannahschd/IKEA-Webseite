@@ -389,7 +389,7 @@ h2 {
 
   @media (min-width: 1371px) {
   .Lederstuhl .bild {
-    width: 600px;
+    width: 500px;
     max-width: 800px;
     min-width: 300px;
     height: auto;
@@ -421,7 +421,7 @@ h2 {
     text-align: left;
   }
   .Glasstuhl .bild {
-    width: 600px;
+    width: 500px;
     max-width: 800px;
     min-width: 300px;
     height: auto;
@@ -439,9 +439,66 @@ h2 {
   @media (min-width: 1371px) {
   .glasstuhl-text {
     width: 600px;
+    margin-right: 200px;
+  }
+}
+@media (min-width: 1371px) {
+  .marmor-perle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    margin: 80px auto;
+    width: 90%;
+    max-width: 1600px;
+    margin-top: 200px;
+  }
+  .Marmorstuhl,
+  .Perlenstuhl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    min-width: 320px;
+    max-width: 500px;
+    text-align: center;
+  }
+  .Marmorstuhl .bild,
+  .Perlenstuhl .bild {
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px;
+    height: auto;
+    margin: 0 0 24px 0;
+    display: block;
+    position: static;
+    left: unset;
+    right: unset;
+    transform: none;
+    object-fit: cover;
   }
 }
 
+@media (min-width: 1371px) {
+  .lederstuhl-text,
+  .glasstuhl-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert den Button */
+  }
+  .cta-lederstuhl,
+  .cta-glasstuhl {
+    display: inline-block;
+    /* Kein margin: 0 auto; */
+    transform-origin: center;
+    transition: transform 0.2s;
+  }
+  .cta-lederstuhl:hover,
+  .cta-glasstuhl:hover {
+    transform: scale(1.12);
+    transform-origin: center;
+  }
+}
 
 /* Tablet: optional, falls du Anpassungen möchtest */
 @media (max-width: 1024px) {
